@@ -1,0 +1,329 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Serif, Cursive, sans-serif;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  margin: 1.5%auto;
+  padding: 10px;
+
+
+}
+
+.secondary-font{
+  font-family: 'Helvetica', serif;
+}
+
+body {
+  background-color: Black;
+}
+
+
+.container{
+  position: relative;
+  margin: auto;
+  padding: 10px
+}
+
+a {
+  color: #F1A63B;
+}
+
+a:hover {
+  color: #ED2024;
+
+}
+.header {
+  width: 100%;
+  height: 10%;
+  padding: 0px 0px 100px 0px;
+  position: absolute;
+  font-family: Sedgwick Ave Display, Cursive, sans-serif;
+  color: color: #F1A63B;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: large;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 0px 10px 0px;
+  width:30%;
+  height: relative;
+  font-family: 'Sedgwick Ave Display', serif;
+}
+
+.logo > a {
+  display: inline-block;
+  height: 100%;
+  line-height: 45px;
+  color: #fff;
+  font-size: 24px;
+}
+
+nav{
+  width: 100%;
+  height: auto;
+  display: none;
+  position: relative;
+  z-index: 10;
+  background-color: rgba(33, 33, 33, 0.5);
+}
+
+nav > a {
+  width: 100%;
+  height: 40px;
+  float: left;
+  padding: 5px 10px;
+  color: #fff;
+}
+
+.mobile-menu-icon {
+  width: 36px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  padding: 15px 10px;
+  z-index: 10;
+}
+
+.mobile-menu-icon > div {
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+
+.mobile-menu-icon:hover {
+  cursor: pointer;
+  background-color: #F1A63B;
+
+}
+
+@media (min-width: 736px) {
+  nav{
+    height: 45px;
+    font-size: 0;
+    display: flex !important;
+    justify-content: flex-end;
+    background-color: transparent;
+  }
+  nav > a {
+    width: auto;
+    height: 100%;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 45px;
+    transition: all .25s ease-in-out;
+  }
+  .mobile-menu-icon {
+    display: none;
+  }
+}
+
+nav > a:hover, nav > a.active{
+  background-color: rgba(0,0,0, 0.75);
+}
+section{
+  width: 100%;
+  height: auto;
+  margin: 25px auto;
+}
+
+.section-title{
+  margin-bottom: 15px;
+  font-family: Sedgwick Ave Display, Cursive, sans-serif;
+  color: #F1A63B;
+  font-size: 400%;
+  font-stretch: 2em;
+}
+
+.image-responsive{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-banner{
+  width: 100%;
+  height: relative;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-banner:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+@media (min-width: 1960px){
+  .page-banner{
+    height: 600px;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1959px){
+  .page-banner{
+    height: 450px;
+    margin-top: 2%;
+  }
+}
+/*
+
+ABOUT
+
+*/
+
+.about-banner{
+background: url('../images/about-banner.png')
+no-repeat top center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.about-image{
+max-width: 20%;
+float: left;
+padding-right: 10px;
+}
+
+.about-band{
+max-width: 80%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding-top:10px;
+}
+
+/*
+
+home
+*/
+
+.Background{
+  Max-width-100%
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:10px;
+}
+
+/*
+
+Discography
+
+*/
+
+.disco-banner{
+  background: url('../images/disco.banner.png')
+  no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+
+  .Disco-album{
+    max-width: 35%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 1024px){
+    .Disco-album{
+      position: static;
+      top: 0;
+      left: 0;
+    }
+
+
+    .Disco-album:hover{
+      max-width: 50%;
+      box-shadow: 0 75px 175px rgba(2, 30, 30, 0);
+      border-style:solid;
+      border-width: thick;
+      border-color: #ED2024;
+    }
+
+  ul.Disco-Details{
+    position: relative;
+    z-index: 10;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media (min-width: 1024px){
+    ul.logo-evolution-details {
+      margin-left: 320px;
+    }
+  }
+
+  .Disco-Title{
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+
+  }
+
+  .Disco-Description{
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  ol.track-listings{
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  ol.track-listings > li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  span.track-number {
+    margin-right: 10px;
+  }
+
+  ul-track-listings > li > .track-time {
+    text-align: right;
+  }
+
+  /*
