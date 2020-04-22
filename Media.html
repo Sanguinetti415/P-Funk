@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Final Project for HTML5/CSS3 Course">
+  <meta name="keywords" content="HTML,CSS,JavaScript,jQuery">
   <meta name="author" content="Steffan Sanguinetti">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>George Clinton</title>
+  <title>George Clinton - Discography</title>
   <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
 </head>
-<body class="home">
+<body class="homepage">
   <div class="header">
     <div class="container">
       <div class="row">
+        <div class="col-xs-12 col-sm-4">
           <a href="main.html"><img class="logo" src="./assets/images/Logo - main menu.png" alt="George Clinton" /></a>
           <div id="MenuIcon" class="mobile-menu-icon">
             <div></div>
@@ -20,7 +22,7 @@
             <div></div>
           </div>
         </div>
-        <nav id="MainMenu">
+        <nav id="MainMenu" class="col-xs-12 col-sm-4">"
           <a href="about.html">About</a>
           <a href="discography.html">Discography</a>
           <a href="media.html">Media</a>
@@ -28,24 +30,75 @@
           <a href="tour.html">Tour</a>
         </nav>
       </div>
-
-  <div class="MainImage">
-    <img src="./assets/images/main.George.png" alt="Welcome to the Mothership"/>
+    </div>
   </div>
-</body>
-</html>
-
-  <div class="video-overlay">
-    <img src="./assets/images/home/Ford-Mustang-Mach-E.jpg" alt="For Mustang Mach E"/>
-    <video class="video-container" autoplay muted playsinline>
-      <source src="./assets/videos/home/Ford-Mustang-Mach-E.webm" type="video/webm"></source>
-      <source src="./assets/videos/home/Ford-Mustang-Mach-E.mp4" type="video/mp4"></source>
-      <source src="./assets/videos/home/Ford-Mustang-Mach-E.ogg" type="video/ogg"></source>
-      Your browser does not suppor the video tag.
-    </video>
-  </div>
+  <main>
+    <div class="page-banner Media-Banner">
+    </div>
+    <div class="container">
+      <h1 class="section-title">Photos</h1>
+      <div class="media-list">
+        <div class="media-card-wrapper">
+          <a class="media-card" href="./assets/images/Media.George.jpg" data-lightbox="ford-motor">
+              <h3>George Clinton</h3>
+            <img src="./assets/images/Media.George.jpg" />
+          </a>
+        </div>
+        <div class="media-card-wrapper">
+          <a class="media-card" href="./assets/images/media.bootsy.jpg" data-lightbox="ford-motor">
+              <h3>Bootsy Collins</h3>
+            <img src="./assets/images/media.bootsy.jpg" />
+          </a>
+        </div>
+        <div class="media-card-wrapper">
+          <a class="media-card" href="./assets/images/media.bernie.jpg" data-lightbox="ford-motor">
+            <h3>Bernie Worrell</h3>
+            <img src="./assets/images/media.bernie.jpg" />
+          </a>
+        </div>
+        <div class="media-card-wrapper">
+          <a class="media-card" href="./assets/images/media.eddie.jpg" data-lightbox="ford-motor">
+              <h3>Eddie Hazel</h3>
+            <img src="./assets/images/media.eddie.jpg" />
+          </a>
+        </div>
+        <div class="media-card-wrapper">
+          <a class="media-card" href="./assets/images/media.mothership-landing.jpg" data-lightbox="ford-motor">
+            <h3>Star Child</h3>
+            <img src="./assets/images/media.mothership-landing.jpg" />
+          </a>
+        </div>
+        <div class="media-card-wrapper">
+          <a class="media-card" href="./assets/images/media.fred.jpg" data-lightbox="ford-motor">
+            <h3>Fred Wesley</h3>
+            <img src="./assets/images/media.fred.jpg" />
+          </a>
+        </div>
+        <div class="media-card-wrapper">
+          <a class="media-card" href="./assets/images/media.brides.jpg" data-lightbox="ford-motor">
+            <h3>The Brides of Funkenstein</h3>
+            <img src="./assets/images/media.brides.jpg" />
+          </a>
+        </div>
+        <div class="media-card-wrapper">
+          <a class="media-card" href="./assets/images/media.nose.jpg" data-lightbox="ford-motor">
+            <h3>Sir Nose D'Voidoffunk</h3>
+            <img src="./assets/images/media.nose.jpg" />
+          </a>
+        </div>
+      </div>
+      <h1 class="section-title">Videos</h1>
+      <div class="media-list">
+        <iframe width="500" height="315" src="https://www.youtube.com/embed/VKfQRU5KKao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="500" height="315" src="https://www.youtube.com/embed/x5s3KfkymkA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="500" height="315" src="https://www.youtube.com/embed/IxAcW7zgAD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="500" height="315" src="https://www.youtube.com/embed/UkLYlrE2lPs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
 </body>
 <script src="./assets/javascripts/jquery-3.3.1.min.js"></script>
+<script src="./assets/javascripts/lightbox.js"></script>
 <script src="./assets/javascripts/lodash.js"></script>
 <script src="./assets/javascripts/mobile-menu.js"></script>
 </html>
