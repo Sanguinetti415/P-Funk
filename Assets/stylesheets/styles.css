@@ -58,7 +58,6 @@ a:hover {
   margin-right: auto;
   padding: 5px 0px 10px 0px;
   width:30%;
-  height: relative;
   font-family: 'Sedgwick Ave Display', serif;
 }
 
@@ -160,7 +159,8 @@ section{
 
 .page-banner{
   width: 100%;
-  height: relative;
+  height: 300px;
+  margin-top: 10px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -186,6 +186,7 @@ section{
     height: 450px;
     margin-top: 2%;
   }
+
 }
 /*
 
