@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Final Project for HTML5/CSS3 Course">
+  <meta name="keywords" content="HTML,CSS,JavaScript,jQuery">
+  <meta name="author" content="Steffan Sanguinetti">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>George Clinton - Merch</title>
+  <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/flexboxgrid.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/merch-filter.css" />
+</head>
+<body class="homepage">
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <a href="main.html"><img class="logo" src="./assets/images/Logo - main menu.png" alt="George Clinton" /></a>
+          <div id="MenuIcon" class="mobile-menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <nav id="MainMenu" class="col-xs-12 col-sm-4">
+          <a href="about.html">About</a>
+          <a href="discography.html" >Discography</a>
+          <a href="media.html">Media</a>
+          <a href="merch.html" class="active">Merch</a>
+          <a href="tour.html">Tour</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="page-banner merch-banner">
+    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="merch-controls">
+          <li data-filter="all">
+            <button class="merch-ctrl-btn active all-icon">All That Funky Stuff</button>
+          </li>
+          <li data-filter="Clothing">
+            <button class="merch-ctrl-btn">
+                Clothing
+            </button>
+          </li>
+          <li data-filter="Illtunez">
+            <button class="merch-ctrl-btn">
+              illtunez
+            </button>
+          </li>
+          <li data-filter="Power Pins">
+            <button class="merch-ctrl-btn">
+              Power Pins
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="filtr-container row">
+      <!-- SUVs & Crossovers -->
+      <div class="col-xs-12 col-sm-4 col-md-3 filtr-item" data-category="Clothing" data-sort="value">
+        <img
+          class="image-responsive"
+          src="./assets/images/merch.shirt1.jpg"
+          alt="2020 Edge"
+        />
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-3 filtr-item" data-category="Clothing" data-sort="value">
+        <img
+          class="image-responsive"
+          src="./assets/images/merch.shirt2.jpg"
+          alt="2020 Edge"
+        />
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-3 filtr-item" data-category="Clothing" data-sort="value">
+        <img
+          class="image-responsive"
+          src="./assets/images/merch.shirt3.jpg"
+          alt="2020 EcoSport"
+        />
+      </div>
+  </body>
+  <script src="./assets/javascripts/jquery.min.js"></script>
+  <script src="./assets/javascripts/merch-filter.js"></script>
+  <script src="./assets/javascripts/lodash.js"></script>
+  <script src="./assets/javascripts/mobile-menu.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.filtr-container').filterizr({});
+      $('.vehicles-ctrl-btn').click(function(){
+        if($(this).hasClass('active')){
+          return false;
+        } else {
+          $('.vehicles-ctrl-btn').removeClass('active');
+          $(this).addClass('active');
+        }
+      })
+    });
+  </script>
+
+  </html>
