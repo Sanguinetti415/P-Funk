@@ -31,7 +31,7 @@ body {
 }
 
 a {
-  color: #ED2024;
+  color: white;
 }
 
 a:hover {
@@ -75,7 +75,7 @@ nav{
   display: none;
   position: relative;
   z-index: 10;
-  background-color: rgba(33, 33, 33, 0.5);
+  background-color: rgba(33, 33, 33, 0.9);
 }
 
 nav > a {
@@ -460,43 +460,8 @@ Discography
         background: rgba(255,255,255,0.5);
       }
 
-      .merch-ctrl-btn span {
-      	display: inline-block;
-      	width: 100%;
-      	height: 100%;
-        position: relative;
-      	-webkit-transition: all 0.3s;
-      	-webkit-backface-visibility: hidden;
-      	-moz-transition: all 0.3s;
-      	-moz-backface-visibility: hidden;
-      	transition: all 0.3s;
-      	backface-visibility: hidden;
-      }
-
-      .merch-ctrl-btn img {
-        width: 75%;
-        height: 75%;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        bottom: 100%;
-        transition: all 0.3s ease-in-out;
-      }
-
-      .merch-ctrl-btn:hover span {
-      	-webkit-transform: translateY(300%);
-      	-moz-transform: translateY(300%);
-      	-ms-transform: translateY(300%);
-      	transform: translateY(300%);
-      }
-
-      .merch-ctrl-btn:hover img {
-        bottom: 15%;
-      }
-
       .filtr-item {
-        width: 100%;
+        width: 300px;
         top: 0;
         overflow: hidden;
         z-index:0;
@@ -505,68 +470,41 @@ Discography
 
       .filtr-item > img {
         width: 250px;
-        height: 190px;
+        height: 250px;
         margin: auto;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        -webkit-filter: grayscale(25%);
       }
 
       .filtr-item:hover {
         cursor: pointer;
         top: .5rem;
-        background: #efefef;
+        background: rgba(255,255,255,0.5);
         z-index:10;
-      }
-
-      .filtr-item:hover > img {
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%);
-        transition: all .3s ease-in-out;
-      }
-
-      .filtr-item.--sold-out:before {
-        content: "Sold Out";
-        width: 20rem;
-        height: 2rem;
-        position: absolute;
-        top: 1.5625rem;
-        right: -105px;
-        padding-top: .25rem;
-        color: #fff;
-        text-align: center;
-        transform: translate(-50%, -25px);
-        z-index: 1;
-        background: rgba(117,0,2, 0.85);
-        -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
-        box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
-        transform: rotate(35deg)
-      }
-
-      .filtr-item.--sold-out:hover{
-        cursor: not-allowed;
+        border-radius: 25px;
+        color: #F1A63B;
       }
 
       button:focus {
         outline: 0;
       }
 
-      table {
-          border-collapse: collapse;
-          border-spacing: 0;
-          width: 100%;
-          display: table
-      }
-
-      td {
+      .merch-title{
         text-align: center;
       }
 
-      .striped-row tbody tr:nth-child(odd) {
-        background-color: #f1f1f1
-      }
+      /*
 
-      .white {
-          color: #000!important;
-          background-color: #fff!important
-      }
+TOUR
+
+      */
+
+          .tour-banner{
+            background: url('../images/Tour.Banner.png')
+            no-repeat top center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            }

@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/flexboxgrid.css" />
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
-  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/merch-filter.css" />
+  <script src="./assets/javascripts/merch-filter.js"></script>
 </head>
 <body class="homepage">
   <div class="header">
@@ -45,16 +45,16 @@
             <button class="merch-ctrl-btn active all-icon">All That Funky Stuff</button>
           </li>
           <li data-filter="Clothing">
-            <button class="merch-ctrl-btn">
+            <button class="merch-ctrl-btn" onclick="filterSelection('Clothing')">
                 Clothing
             </button>
           </li>
-          <li data-filter="Illtunez">
+          <li data-filter="Tunez">
             <button class="merch-ctrl-btn">
-              illtunez
+              Tunez
             </button>
           </li>
-          <li data-filter="Power Pins">
+          <li data-filter="Pins">
             <button class="merch-ctrl-btn">
               Power Pins
             </button>
@@ -63,46 +63,92 @@
       </div>
     </div>
 
+
     <div class="filtr-container row">
-      <!-- SUVs & Crossovers -->
+      <!-- Clothing -->
       <div class="col-xs-12 col-sm-4 col-md-3 filtr-item" data-category="Clothing" data-sort="value">
+        <h3 class="merch-title">Farewell Tour T-Shirt</h3>
         <img
           class="image-responsive"
           src="./assets/images/merch.shirt1.jpg"
-          alt="2020 Edge"
+          alt="Farewell Tour Shirt"
         />
       </div>
       <div class="col-xs-12 col-sm-4 col-md-3 filtr-item" data-category="Clothing" data-sort="value">
+        <h3 class="merch-title">Vintage P-Funk T-Shirt</h3>
         <img
           class="image-responsive"
           src="./assets/images/merch.shirt2.jpg"
-          alt="2020 Edge"
+          alt="Vintage P-Funk Shirt"
         />
       </div>
       <div class="col-xs-12 col-sm-4 col-md-3 filtr-item" data-category="Clothing" data-sort="value">
+        <h3 class="merch-title">P-Funk Logo T-Shirt</h3>
         <img
           class="image-responsive"
           src="./assets/images/merch.shirt3.jpg"
-          alt="2020 EcoSport"
+          alt="P-Funk Logo Shirt"
         />
       </div>
-  </body>
-  <script src="./assets/javascripts/jquery.min.js"></script>
-  <script src="./assets/javascripts/merch-filter.js"></script>
-  <script src="./assets/javascripts/lodash.js"></script>
-  <script src="./assets/javascripts/mobile-menu.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('.filtr-container').filterizr({});
-      $('.vehicles-ctrl-btn').click(function(){
-        if($(this).hasClass('active')){
-          return false;
-        } else {
-          $('.vehicles-ctrl-btn').removeClass('active');
-          $(this).addClass('active');
-        }
-      })
-    });
-  </script>
 
-  </html>
+      <div class="filtr-container row">
+        <!-- Tunez -->
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item" data-category="Tunez" data-sort="value">
+        <h3 class="merch-title">Maggot Brain LP</h3>
+          <img
+            class="image-responsive"
+            src="./assets/images/merch.album1.jpg"
+            alt="Maggot Brain"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item" data-category="Tunez" data-sort="value">
+        <h3 class="merch-title">Funkentelechy LP</h3>
+          <img
+            class="image-responsive"
+            src="./assets/images/merch.album2.jpg"
+            alt="Funkentelechy"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item" data-category="Tunez" data-sort="value">
+        <h3 class="merch-title">Dr. Funkenstein LP</h3>
+          <img
+            class="image-responsive"
+            src="./assets/images/merch.album3.jpg"
+            alt="Dr. Funkenstein"
+          />
+        </div>
+
+        <!-- Power Pins -->
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item" data-category="Pins" data-sort="value">
+        <h3 class="merch-title">Funky Dreads Pin</h3>
+          <img
+            class="image-responsive"
+            src="./assets/images/merch.pin1.png"
+            alt="Funky Dreads"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item" data-category="Pins" data-sort="value">
+        <h3 class="merch-title">Chocolate City Pin</h3>
+          <img
+            class="image-responsive"
+            src="./assets/images/merch.pin2.png"
+            alt="Chocolate City"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item" data-category="Pins" data-sort="value">
+        <h3 class="merch-title">Standing on the Verge Pin</h3>
+          <img
+            class="image-responsive"
+            src="./assets/images/merch.pin3.png"
+            alt="Standing on the Verge"
+          />
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="./assets/javascripts/merch-filter.js"></script>
+<script src="./assets/javascripts/jquery.min.js"></script>
+<script src="./assets/javascripts/lodash.js"></script>
+<script src="./assets/javascripts/mobile.menu.js"></script>
+</html>
