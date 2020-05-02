@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/flexboxgrid.css" />
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
-  <script src="./assets/javascripts/merch-filter.js"></script>
 </head>
 <body class="homepage">
   <div class="header">
@@ -45,17 +44,17 @@
             <button class="merch-ctrl-btn active all-icon">All That Funky Stuff</button>
           </li>
           <li data-filter="Clothing">
-            <button class="merch-ctrl-btn" onclick="filterSelection('Clothing')">
+            <button class="merch-ctrl-btn onclick=">
                 Clothing
             </button>
           </li>
           <li data-filter="Tunez">
-            <button class="merch-ctrl-btn">
+            <button class="merch-ctrl-btn onclick=">
               Tunez
             </button>
           </li>
           <li data-filter="Pins">
-            <button class="merch-ctrl-btn">
+            <button class="merch-ctrl-btn onclick=">
               Power Pins
             </button>
           </li>
@@ -91,7 +90,6 @@
         />
       </div>
 
-      <div class="filtr-container row">
         <!-- Tunez -->
         <div class="col-xs-12 col-sm-4 col-md-3 filtr-item" data-category="Tunez" data-sort="value">
         <h3 class="merch-title">Maggot Brain LP</h3>
@@ -147,8 +145,21 @@
     </div>
   </main>
 </body>
-<script src="./assets/javascripts/merch-filter.js"></script>
 <script src="./assets/javascripts/jquery.min.js"></script>
+<script src="./assets/javascripts/jquery.filterizr.min.js"></script>
 <script src="./assets/javascripts/lodash.js"></script>
 <script src="./assets/javascripts/mobile.menu.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.filtr-container').filterizr({});
+    $('.merch-ctrl-btn').click(function () {
+      if ($(this).hasClass('active')) {
+        return false;
+      } else {
+        $('.merch-ctrl-btn').removeClass('active');
+        $(this).addClass('active');
+      }
+    })
+  });
+</script>
 </html>

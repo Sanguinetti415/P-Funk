@@ -312,6 +312,7 @@ Discography
     padding: 0;
     list-style: none;
     text-align: center;
+    hyphens: auto;
   }
 
   ol.track-listings > li {
@@ -320,8 +321,9 @@ Discography
     justify-content: space-between;
     padding: 5px;
     border-bottom: 1px solid #eee;
-    text-align: center;
+    text-align: left;
     margin-bottom: 5px;
+    hyphens: auto;
   }
 
   span.track-number {
